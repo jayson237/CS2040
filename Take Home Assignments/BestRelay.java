@@ -22,7 +22,7 @@ class BestRelay {
             double totalTime = runners.get(i).value1;
 
             for (int j = 0; j < numOfRunners && tempTeam.size() < 4; j++) {
-                if (i != j) {
+                if (runners.get(i) != runners.get(j)) {
                     tempTeam.add(runners.get(j));
                     totalTime += runners.get(j).value2;
                 }
