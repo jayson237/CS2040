@@ -51,7 +51,6 @@ class CardTrading {
     }
 
     static class CardPriceComparator implements Comparator<Card> {
-        @Override
         public int compare(Card c1, Card c2) {
             long c1cost = c1.sellPrice + c1.buyPrice;
             long c2cost = c2.sellPrice + c2.buyPrice;
