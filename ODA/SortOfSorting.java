@@ -15,7 +15,6 @@ class SortOfSorting {
             cases = sc.nextInt();
             if (cases != 0) System.out.println(" ");
         }
-        sc.close();
     }
 
     static class NameComparator implements Comparator<String> {
@@ -28,3 +27,23 @@ class SortOfSorting {
         }
     }
 }
+
+// import java.util.*;
+
+// class SortOfSorting {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         int cases = sc.nextInt();
+//         while (cases != 0) {
+//             ArrayList<String> names = new ArrayList<>();
+//             for (int i = 0; i < cases; i++) {
+//                 String name = sc.next();
+//                 names.add(name);
+//             }
+//             names.sort(Comparator.comparing(s -> s.substring(0, 2)));
+//             names.forEach(System.out::println);
+//             cases = sc.nextInt();
+//             if (cases != 0) System.out.println(" ");
+//         }
+//     }
+// }
