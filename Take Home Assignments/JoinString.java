@@ -16,7 +16,7 @@ class JoinString {
                 arr.add(new Node(br.readLine()));
             }
 
-            Node original, update;
+            Node originalString, updateString;
             int[] s = new int[2];
 
             for (int i = 0; i < n - 1 ; i++) {
@@ -25,23 +25,23 @@ class JoinString {
                 s[0] = Integer.parseInt(operations[0]);
                 s[1] = Integer.parseInt(operations[1]);
 
-                update = arr.get(s[0] - 1);
-                original = arr.get(s[1] - 1);
+                updateString = arr.get(s[0] - 1);
+                originalString = arr.get(s[1] - 1);
 
-                if (update.before != null) {
-                    update.before.after = original;
+                if (updateString.previous != null) {
+                    updateString.previous.next = originalString;
                 }
 
-                update.after = (update.before == null) ? original : update.after;
-                update.before = (original.after != null) ? original.before : original;
+                updateString.next = (updateString.previous == null) ? originalString : updateString.next;
+                updateString.previous = (originalString.next != null) ? originalString.previous : originalString;
 
             }
 
-            for (update = arr.get(s[0]-1); update.after != null; update = update.after) {
-                pw.print(update.word);
+            for (updateString = arr.get(s[0]-1); updateString.next != null; updateString = updateString.next) {
+                pw.print(updateString.word);
             }
 
-            pw.print(update.word);
+            pw.print(updateString.word);
 
         }
         pw.flush();
@@ -49,13 +49,13 @@ class JoinString {
     }
 
     public static class Node {
-        Node before;
-        Node after;
+        Node previous;
+        Node next;
         String word;
 
         Node (String word) {
-            this.after = null;
-            this.before = null;
+            this.next = null;
+            this.previous = null;
             this.word = word;
         }
     }
