@@ -150,7 +150,7 @@ class AVL {
 
     int checkRight(Vertex v, String query) {
         if (v == null) return 0;
-        if (v.key.startsWith(query)) return  getSize(v.left) + 1 + checkRight(v.right, query);
+        if (v.key.indexOf(query) == 0) return  getSize(v.left) + 1 + checkRight(v.right, query);
         return checkRight(v.left, query);
     }
 
