@@ -1,5 +1,5 @@
 # CS2040
-Data Structure and Algorithms course at NUS
+Data Structure and Algorithms course at NUS under Chong Ket Fah
 ##
-Hi there! here are some of the Kattis questions that I did in CS2040 taken in AY23/24 Sem 1
-Please use these resources for learning purposes only.
+Greetings! Below are the Kattis questions I completed during the AY23/24 Sem 1 for CS2040. Kindly utilize these materials exclusively for learning purposes.
+I have also added the lecture notes given during my time in 2040, Cheers.
